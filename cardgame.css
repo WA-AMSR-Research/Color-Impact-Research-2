@@ -1,0 +1,134 @@
+@charset="utf-8";
+
+body {
+	font-family: "Arial Unicode MS", sans-serif;
+	text-align: center;
+	width: 100%;
+	height: 100%;
+}
+
+h1 {
+	color: black;
+	margin: 10px;
+	margin-bottom: 50px;
+	font-weight: bold;
+}
+
+#gameWrapper {
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 40px;
+	padding: 20px;
+}
+
+#panel {
+	width: 800px;
+	margin-left: auto;
+	margin-right: auto;
+	height: 450px;
+	overflow: hidden;
+	padding-bottom: 60px;
+}
+
+.card {
+	float: left;
+	width: 180px;
+	height: 150px;
+
+	margin: 0.2rem 0.2rem;
+
+	border: 1px solid black;
+	border-radius: 12px;
+
+	text-align: center;
+	vertical-align: middle;
+	line-height: 90px;
+	font-size: xx-large;
+	font-weight: bold;
+
+	cursor: pointer;
+	backface-visibility: hidden;
+
+	box-shadow: black 2px 2px;
+	background: transparent;
+}
+
+/* card is on the back */
+.back {
+	background-color: lightgray;
+	background-size: 60px 80px;
+}
+
+/* When finished */
+.finish {
+	opacity: 0;
+	cursor: default;
+}
+
+/* Elapsed Time */
+#result {
+	font-size: 1.2em;
+	font-weight: bold;
+	display: inline-block;
+	margin-top: 30px;
+	margin-bottom: 80px;
+}
+
+
+/*styles for congratulations modal*/
+.overlay {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: rgba(0, 0, 0, 0.7);
+	transition: opacity 500ms;
+	visibility: hidden;
+	opacity: 0;
+}
+
+.overlay:target {
+	visibility: visibile;
+	opacity: 1;
+}
+
+.popup {
+	margin: 70px auto;
+	padding: 20px;
+	background: white;
+	border-radius: 5px;
+	width: 85%;
+	position: relative;
+	transition: all 5s ease-in-out;
+	font-family: "Arial Unicode MS", sans-serif;
+}
+
+.popup .h2 {
+	margin-top: 10px;
+	color: black;
+	font-family: "Arial Unicode MS", sans-serif;
+}
+
+.popup .close {
+	position: absolute;
+	top: 20px;
+	right: 30px;
+	transition: all 200ms;
+	font-size: 30px;
+	font-weight: bold;
+	text-decoration: none;
+	color: black;
+}
+
+.popup .close:hover {
+	color: red;
+}
+
+.popup .content-1,
+.content-2 {
+	max-height: 30%;
+	overflow: auto;
+	text-align: center;
+}
